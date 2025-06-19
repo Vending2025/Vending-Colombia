@@ -8,21 +8,18 @@
   <style>
     body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
     header { background: #2c3e50; color: white; padding: 1em 0; text-align: center; }
-    nav { background: #34495e; padding: 1em; position: sticky; top: 0; z-index: 1000; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav { background: #34495e; padding: 1em; position: sticky; top: 0; z-index: 1000; text-align: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; cursor: pointer; }
     nav a:hover { text-decoration: underline; }
-    section { padding: 2em; max-width: 1200px; margin: auto; }
+    section { display: none; padding: 2em; max-width: 1200px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; margin-top: 20px;}
+    section.active { display: block; }
     h2 { color: #2c3e50; }
-    .filters { margin: 1em 0; }
-    .center-section { display: flex; flex-wrap: wrap; gap: 20px; }
+    .center-section { display: flex; flex-wrap: wrap; gap: 20px; padding: 2em; max-width: 1200px; margin: auto; }
     .news { flex: 1 1 60%; background: white; padding: 1em; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
     .news img { width: 100%; border-radius: 10px; margin-top: 1em; }
     .banner { flex: 1 1 35%; position: relative; overflow: hidden; height: 300px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
     .slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
     .slide.active { opacity: 1; }
-    form input, form textarea { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
-    form button { padding: 10px 20px; background: #2c3e50; color: white; border: none; cursor: pointer; border-radius: 5px; }
-    footer { text-align: center; padding: 2em; background: #2c3e50; color: white; margin-top: 2em; }
   </style>
 </head>
 <body>
@@ -32,17 +29,18 @@
   </header>
 
   <nav>
-    <a href="#quienes">Quiénes Somos</a>
-    <a href="#operadores">Operadores</a>
-    <a href="#tecnico">Servicio Técnico</a>
-    <a href="#cafe">Proveedores Café</a>
-    <a href="#snacks">Snacks y Bebidas</a>
-    <a href="#vitrina">Vitrina</a>
-    <a href="#otros">Otros Servicios</a>
-    <a href="#contacto">Contacto</a>
+    <a onclick="showSection('inicio')">Inicio</a>
+    <a onclick="showSection('quienes')">Quiénes Somos</a>
+    <a onclick="showSection('operadores')">Operadores</a>
+    <a onclick="showSection('tecnico')">Servicio Técnico</a>
+    <a onclick="showSection('cafe')">Proveedores Café</a>
+    <a onclick="showSection('snacks')">Snacks y Bebidas</a>
+    <a onclick="showSection('vitrina')">Vitrina</a>
+    <a onclick="showSection('otros')">Otros Servicios</a>
+    <a onclick="showSection('contacto')">Contacto</a>
   </nav>
 
-  <section class="center-section">
+  <div id="inicio" class="center-section active">
     <div class="news">
       <h2>Noticias y Novedades</h2>
       <p>Bienvenido al portal informativo del sector vending en Colombia. Aquí encontrarás noticias recientes, novedades del sector, tasas de cambio y más.</p>
@@ -53,64 +51,24 @@
       <img class="slide" src="https://images.unsplash.com/photo-1587560699334-cc4ff6349095" alt="Promo 2"/>
       <img class="slide" src="https://images.unsplash.com/photo-1573497019154-99a5aa5f6d49" alt="Promo 3"/>
     </div>
-  </section>
+  </div>
 
-  <section id="quienes">
-    <h2>Quiénes Somos</h2>
-    <p>Somos el primer directorio nacional de vending en Colombia, reuniendo operadores, técnicos y proveedores del país.</p>
-  </section>
-
-  <section id="operadores">
-    <h2>Operadores en Colombia</h2>
-    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
-  </section>
-
-  <section id="tecnico">
-    <h2>Servicio Técnico</h2>
-    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
-  </section>
-
-  <section id="cafe">
-    <h2>Proveedores de Café</h2>
-    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
-  </section>
-
-  <section id="snacks">
-    <h2>Proveedores de Snacks y Bebidas</h2>
-    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
-  </section>
-
-  <section id="vitrina">
-    <h2>Vitrina de Ventas</h2>
-    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
-  </section>
-
-  <section id="otros">
-    <h2>Otros Servicios</h2>
-    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
-  </section>
-
-  <section id="contacto">
-    <h2>Formulario de Contacto</h2>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" />
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" />
-
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="5"></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Directorio Vending Colombia - Todos los derechos reservados</p>
-  </footer>
+  <section id="quienes"><h2>Quiénes Somos</h2><p>Somos el primer directorio nacional de vending en Colombia.</p></section>
+  <section id="operadores"><h2>Operadores en Colombia</h2><p>[Filtros y datos aquí]</p></section>
+  <section id="tecnico"><h2>Servicio Técnico</h2><p>[Filtros y datos aquí]</p></section>
+  <section id="cafe"><h2>Proveedores de Café</h2><p>[Filtros y datos aquí]</p></section>
+  <section id="snacks"><h2>Snacks y Bebidas</h2><p>[Filtros y datos aquí]</p></section>
+  <section id="vitrina"><h2>Vitrina de Ventas</h2><p>[Ofertas aquí]</p></section>
+  <section id="otros"><h2>Otros Servicios</h2><p>[Filtros y datos aquí]</p></section>
+  <section id="contacto"><h2>Contacto</h2><p>[Formulario aquí]</p></section>
 
   <script>
+    const sections = document.querySelectorAll('section, .center-section');
+    function showSection(id) {
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
     let slides = document.querySelectorAll('.slide');
     let current = 0;
     setInterval(() => {
