@@ -1,204 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Directorio Vending Colombia</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f8f8;
-      color: #333;
-    }
-    header {
-      background: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0;
-    }
-    nav ul li {
-      margin: 5px 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      padding: 20px;
-    }
-    section {
-      margin-bottom: 40px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    form label, form input, form textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    form input, form textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      background: #004080;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      background: #004080;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .whatsapp-button {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    .operador {
-      margin-bottom: 20px;
-    }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 5px 0;
-      }
-    }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
+    header { background: #2c3e50; color: white; padding: 1em 0; text-align: center; }
+    nav { background: #34495e; padding: 1em; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 2em; max-width: 1200px; margin: auto; }
+    h2 { color: #2c3e50; }
+    .filters { margin: 1em 0; }
+    .center-section { display: flex; flex-wrap: wrap; gap: 20px; }
+    .news { flex: 1 1 60%; background: white; padding: 1em; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    .news img { width: 100%; border-radius: 10px; margin-top: 1em; }
+    .banner { flex: 1 1 35%; position: relative; overflow: hidden; height: 300px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    .slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
+    .slide.active { opacity: 1; }
+    form input, form textarea { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    form button { padding: 10px 20px; background: #2c3e50; color: white; border: none; cursor: pointer; border-radius: 5px; }
+    footer { text-align: center; padding: 2em; background: #2c3e50; color: white; margin-top: 2em; }
   </style>
 </head>
 <body>
   <header>
     <h1>Directorio Vending Colombia</h1>
-    <nav>
-      <ul>
-        <li><a href="#operadores">Operadores</a></li>
-        <li><a href="#servicio-tecnico">Servicio Técnico</a></li>
-        <li><a href="#insumos-cafe">Insumos Café</a></li>
-        <li><a href="#snacks-bebidas">Snacks y Bebidas</a></li>
-        <li><a href="#vitrina">Vitrina</a></li>
-        <li><a href="#contacto">Contáctenos</a></li>
-      </ul>
-    </nav>
+    <p>Conectando la industria vending en todo el país 🇨🇴</p>
   </header>
 
-  <main>
-    <section id="operadores">
-      <h2>Operadores por Departamento</h2>
-      <label for="departamento">Selecciona un departamento:</label>
-      <select id="departamento">
-        <option value="todos">Todos</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
-      </select>
-      <div id="lista-operadores">
-        <div class="operador" data-depto="cundinamarca">
-          <p><strong>Máquinas Vending Bogotá</strong><br>Tel: 3001234567<br>Email: contacto@mvbogota.com</p>
-        </div>
-        <div class="operador" data-depto="antioquia">
-          <p><strong>Vending Medellín</strong><br>Tel: 3107654321<br>Email: info@vmedellin.com</p>
-        </div>
-        <div class="operador" data-depto="valle">
-          <p><strong>Café Vending Cali</strong><br>Tel: 3205551234<br>Email: ventas@cafevendingcali.com</p>
-        </div>
-        <div class="operador" data-depto="cundinamarca">
-          <p><strong>Distribuidores Zona Centro</strong><br>Tel: 3229988776<br>Email: zona@distribuidores.com</p>
-        </div>
-      </div>
-    </section>
+  <nav>
+    <a href="#quienes">Quiénes Somos</a>
+    <a href="#operadores">Operadores</a>
+    <a href="#tecnico">Servicio Técnico</a>
+    <a href="#cafe">Proveedores Café</a>
+    <a href="#snacks">Snacks y Bebidas</a>
+    <a href="#vitrina">Vitrina</a>
+    <a href="#otros">Otros Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-    <section id="servicio-tecnico">
-      <h2>Servicio Técnico y Repuestos</h2>
-      <div>
-        <p><strong>TecniVending Colombia</strong><br>Tel: 3112223344<br>Email: soporte@tecnivending.co</p>
-        <p><strong>Soluciones Técnicas Vending</strong><br>Tel: 3008899000<br>Email: reparaciones@stvending.com</p>
-      </div>
-    </section>
+  <section class="center-section">
+    <div class="news">
+      <h2>Noticias y Novedades</h2>
+      <p>Bienvenido al portal informativo del sector vending en Colombia. Aquí encontrarás noticias recientes, novedades del sector, tasas de cambio y más.</p>
+      <img src="https://images.unsplash.com/photo-1603785221184-6406a5bdee29" alt="Máquina Vending">
+    </div>
+    <div class="banner">
+      <img class="slide active" src="https://images.unsplash.com/photo-1586015559303-65504be27d47" alt="Promo 1"/>
+      <img class="slide" src="https://images.unsplash.com/photo-1587560699334-cc4ff6349095" alt="Promo 2"/>
+      <img class="slide" src="https://images.unsplash.com/photo-1573497019154-99a5aa5f6d49" alt="Promo 3"/>
+    </div>
+  </section>
 
-    <section id="insumos-cafe">
-      <h2>Proveedores de Insumos para Café</h2>
-      <div>
-        <p><strong>Café Express Colombia</strong><br>Tel: 3024567890<br>Email: contacto@cafeexpress.com.co</p>
-        <p><strong>Delicias del Grano</strong><br>Tel: 3111239876<br>Email: ventas@deliciasgrano.com</p>
-      </div>
-    </section>
+  <section id="quienes">
+    <h2>Quiénes Somos</h2>
+    <p>Somos el primer directorio nacional de vending en Colombia, reuniendo operadores, técnicos y proveedores del país.</p>
+  </section>
 
-    <section id="snacks-bebidas">
-      <h2>Proveedores de Snacks y Bebidas</h2>
-      <div>
-        <p><strong>Distribuciones Rápidas S.A.S.</strong><br>Tel: 3019876543<br>Email: pedidos@distribucionesrapidas.com</p>
-        <p><strong>SnackMaster Colombia</strong><br>Tel: 3134567890<br>Email: ventas@snackmaster.com</p>
-      </div>
-    </section>
+  <section id="operadores">
+    <h2>Operadores en Colombia</h2>
+    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
+  </section>
 
-    <section id="vitrina">
-      <h2>Vitrina de Ventas</h2>
-      <div>
-        <p><strong>Máquina Vending Automática XZ-300</strong><br>Precio: $5.000.000 COP<br>Contacto: ventas@vendingventas.com</p>
-        <p><strong>Máquina Semiautomática YT-200</strong><br>Precio: $3.800.000 COP<br>Contacto: info@equiposvending.co</p>
-      </div>
-    </section>
+  <section id="tecnico">
+    <h2>Servicio Técnico</h2>
+    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
+  </section>
 
-    <section id="contacto">
-      <h2>Contáctenos</h2>
-      <form action="mailto:directoriovendingcol@gmail.com" method="post" enctype="text/plain">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-      <a class="whatsapp-button" href="https://wa.me/573001234567" target="_blank">Afíliate vía WhatsApp</a>
-    </section>
-  </main>
+  <section id="cafe">
+    <h2>Proveedores de Café</h2>
+    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
+  </section>
+
+  <section id="snacks">
+    <h2>Proveedores de Snacks y Bebidas</h2>
+    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
+  </section>
+
+  <section id="vitrina">
+    <h2>Vitrina de Ventas</h2>
+    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
+  </section>
+
+  <section id="otros">
+    <h2>Otros Servicios</h2>
+    <div class="filters">[Filtro por departamento y ciudad aquí]</div>
+  </section>
+
+  <section id="contacto">
+    <h2>Formulario de Contacto</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Directorio Vending Colombia. Todos los derechos reservados.</p>
-    <p>Síguenos en:
-      <a href="#" style="color:white;">Facebook</a> |
-      <a href="#" style="color:white;">Instagram</a>
-    </p>
+    <p>© 2025 Directorio Vending Colombia - Todos los derechos reservados</p>
   </footer>
 
   <script>
-    const selectDepto = document.getElementById('departamento');
-    const operadores = document.querySelectorAll('.operador');
-    selectDepto.addEventListener('change', () => {
-      const selected = selectDepto.value;
-      operadores.forEach(op => {
-        op.style.display = (selected === 'todos' || op.dataset.depto === selected) ? 'block' : 'none';
-      });
-    });
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
   </script>
 </body>
 </html>
