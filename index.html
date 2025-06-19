@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Directorio Vending Colombia</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
-    header { background: #2c3e50; color: white; padding: 1em 0; text-align: center; }
-    nav { background: #34495e; padding: 1em; position: sticky; top: 0; z-index: 1000; text-align: center; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; cursor: pointer; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f2f6fa; }
+    header { background: linear-gradient(to right, #ffd600, #005aa7); color: white; padding: 2em 0; text-align: center; }
+    nav { background: #005aa7; padding: 1em; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; margin: 0 12px; font-weight: bold; text-decoration: none; font-size: 1rem; }
     nav a:hover { text-decoration: underline; }
     section { display: none; padding: 2em; max-width: 1200px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; margin-top: 20px; }
     section.active { display: block; }
-    h2 { color: #2c3e50; }
     .center-section { display: flex; flex-wrap: wrap; gap: 20px; padding: 2em; max-width: 1200px; margin: auto; }
     .news { flex: 1 1 60%; background: white; padding: 1em; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
     .news img { width: 100%; border-radius: 10px; margin-top: 1em; }
@@ -21,13 +20,14 @@
     .slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
     .slide.active { opacity: 1; }
     .filters { margin: 1em 0; }
-    select { margin: 0 10px; padding: 5px; }
+    select { margin: 0 10px; padding: 6px; border-radius: 5px; border: 1px solid #ccc; }
+    h2 { color: #005aa7; }
   </style>
 </head>
 <body>
   <header>
     <h1>Directorio Vending Colombia</h1>
-    <p>Conectando la industria vending en todo el país 🇨🇴</p>
+    <p>Conectando la industria vending en todo el territorio 🇨🇴</p>
   </header>
 
   <nav>
@@ -45,7 +45,7 @@
   <div id="inicio" class="center-section active">
     <div class="news">
       <h2>Noticias y Novedades</h2>
-      <p>Bienvenido al portal informativo del sector vending en Colombia. Aquí encontrarás noticias recientes, novedades del sector, tasas de cambio y más.</p>
+      <p>Entérate de lo último en el mundo vending: eventos, tecnología, lanzamientos, alianzas y más.</p>
       <img src="https://images.unsplash.com/photo-1603785221184-6406a5bdee29" alt="Máquina Vending">
     </div>
     <div class="banner">
@@ -55,22 +55,82 @@
     </div>
   </div>
 
-  <section id="quienes"><h2>Quiénes Somos</h2><p>Somos el primer directorio nacional de vending en Colombia.</p></section>
+  <section id="quienes"><h2>Quiénes Somos</h2><p>Somos el primer directorio digital de la industria vending en Colombia, conectando operadores, técnicos y proveedores en todo el país.</p></section>
   <section id="operadores"><h2>Operadores en Colombia</h2>
     <div class="filters">
       <label for="departamento">Departamento:</label>
       <select id="departamento">
         <option value="">Selecciona un departamento</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
+        <option value="Amazonas">Amazonas</option>
+<option value="Antioquia">Antioquia</option>
+<option value="Arauca">Arauca</option>
+<option value="Atlántico">Atlántico</option>
+<option value="Bogotá D.C.">Bogotá D.C.</option>
+<option value="Bolívar">Bolívar</option>
+<option value="Boyacá">Boyacá</option>
+<option value="Caldas">Caldas</option>
+<option value="Caquetá">Caquetá</option>
+<option value="Casanare">Casanare</option>
+<option value="Cauca">Cauca</option>
+<option value="Cesar">Cesar</option>
+<option value="Chocó">Chocó</option>
+<option value="Córdoba">Córdoba</option>
+<option value="Cundinamarca">Cundinamarca</option>
+<option value="Guainía">Guainía</option>
+<option value="Guaviare">Guaviare</option>
+<option value="Huila">Huila</option>
+<option value="La Guajira">La Guajira</option>
+<option value="Magdalena">Magdalena</option>
+<option value="Meta">Meta</option>
+<option value="Nariño">Nariño</option>
+<option value="Norte de Santander">Norte de Santander</option>
+<option value="Putumayo">Putumayo</option>
+<option value="Quindío">Quindío</option>
+<option value="Risaralda">Risaralda</option>
+<option value="San Andrés y Providencia">San Andrés y Providencia</option>
+<option value="Santander">Santander</option>
+<option value="Sucre">Sucre</option>
+<option value="Tolima">Tolima</option>
+<option value="Valle del Cauca">Valle del Cauca</option>
+<option value="Vaupés">Vaupés</option>
+<option value="Vichada">Vichada</option>
       </select>
       <label for="ciudad">Ciudad:</label>
       <select id="ciudad">
         <option value="">Selecciona una ciudad</option>
-        <option value="bogota">Bogotá</option>
-        <option value="medellin">Medellín</option>
-        <option value="cali">Cali</option>
+        <optgroup label="Amazonas"><option value="Leticia">Leticia</option><option value="Puerto Nariño">Puerto Nariño</option></optgroup>
+<optgroup label="Antioquia"><option value="Medellín">Medellín</option><option value="Bello">Bello</option><option value="Envigado">Envigado</option><option value="Itagüí">Itagüí</option></optgroup>
+<optgroup label="Arauca"><option value="Arauca">Arauca</option><option value="Arauquita">Arauquita</option></optgroup>
+<optgroup label="Atlántico"><option value="Barranquilla">Barranquilla</option><option value="Soledad">Soledad</option></optgroup>
+<optgroup label="Bogotá D.C."><option value="Bogotá">Bogotá</option></optgroup>
+<optgroup label="Bolívar"><option value="Cartagena">Cartagena</option><option value="Magangué">Magangué</option></optgroup>
+<optgroup label="Boyacá"><option value="Tunja">Tunja</option><option value="Duitama">Duitama</option><option value="Sogamoso">Sogamoso</option></optgroup>
+<optgroup label="Caldas"><option value="Manizales">Manizales</option></optgroup>
+<optgroup label="Caquetá"><option value="Florencia">Florencia</option></optgroup>
+<optgroup label="Casanare"><option value="Yopal">Yopal</option></optgroup>
+<optgroup label="Cauca"><option value="Popayán">Popayán</option></optgroup>
+<optgroup label="Cesar"><option value="Valledupar">Valledupar</option></optgroup>
+<optgroup label="Chocó"><option value="Quibdó">Quibdó</option></optgroup>
+<optgroup label="Córdoba"><option value="Montería">Montería</option></optgroup>
+<optgroup label="Cundinamarca"><option value="Soacha">Soacha</option><option value="Girardot">Girardot</option><option value="Zipaquirá">Zipaquirá</option></optgroup>
+<optgroup label="Guainía"><option value="Inírida">Inírida</option></optgroup>
+<optgroup label="Guaviare"><option value="San José del Guaviare">San José del Guaviare</option></optgroup>
+<optgroup label="Huila"><option value="Neiva">Neiva</option></optgroup>
+<optgroup label="La Guajira"><option value="Riohacha">Riohacha</option></optgroup>
+<optgroup label="Magdalena"><option value="Santa Marta">Santa Marta</option></optgroup>
+<optgroup label="Meta"><option value="Villavicencio">Villavicencio</option></optgroup>
+<optgroup label="Nariño"><option value="Pasto">Pasto</option></optgroup>
+<optgroup label="Norte de Santander"><option value="Cúcuta">Cúcuta</option></optgroup>
+<optgroup label="Putumayo"><option value="Mocoa">Mocoa</option></optgroup>
+<optgroup label="Quindío"><option value="Armenia">Armenia</option></optgroup>
+<optgroup label="Risaralda"><option value="Pereira">Pereira</option></optgroup>
+<optgroup label="San Andrés y Providencia"><option value="San Andrés">San Andrés</option></optgroup>
+<optgroup label="Santander"><option value="Bucaramanga">Bucaramanga</option></optgroup>
+<optgroup label="Sucre"><option value="Sincelejo">Sincelejo</option></optgroup>
+<optgroup label="Tolima"><option value="Ibagué">Ibagué</option></optgroup>
+<optgroup label="Valle del Cauca"><option value="Cali">Cali</option><option value="Palmira">Palmira</option></optgroup>
+<optgroup label="Vaupés"><option value="Mitú">Mitú</option></optgroup>
+<optgroup label="Vichada"><option value="Puerto Carreño">Puerto Carreño</option></optgroup>
       </select>
     </div>
     <div class="resultados">
@@ -82,16 +142,76 @@
       <label for="departamento">Departamento:</label>
       <select id="departamento">
         <option value="">Selecciona un departamento</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
+        <option value="Amazonas">Amazonas</option>
+<option value="Antioquia">Antioquia</option>
+<option value="Arauca">Arauca</option>
+<option value="Atlántico">Atlántico</option>
+<option value="Bogotá D.C.">Bogotá D.C.</option>
+<option value="Bolívar">Bolívar</option>
+<option value="Boyacá">Boyacá</option>
+<option value="Caldas">Caldas</option>
+<option value="Caquetá">Caquetá</option>
+<option value="Casanare">Casanare</option>
+<option value="Cauca">Cauca</option>
+<option value="Cesar">Cesar</option>
+<option value="Chocó">Chocó</option>
+<option value="Córdoba">Córdoba</option>
+<option value="Cundinamarca">Cundinamarca</option>
+<option value="Guainía">Guainía</option>
+<option value="Guaviare">Guaviare</option>
+<option value="Huila">Huila</option>
+<option value="La Guajira">La Guajira</option>
+<option value="Magdalena">Magdalena</option>
+<option value="Meta">Meta</option>
+<option value="Nariño">Nariño</option>
+<option value="Norte de Santander">Norte de Santander</option>
+<option value="Putumayo">Putumayo</option>
+<option value="Quindío">Quindío</option>
+<option value="Risaralda">Risaralda</option>
+<option value="San Andrés y Providencia">San Andrés y Providencia</option>
+<option value="Santander">Santander</option>
+<option value="Sucre">Sucre</option>
+<option value="Tolima">Tolima</option>
+<option value="Valle del Cauca">Valle del Cauca</option>
+<option value="Vaupés">Vaupés</option>
+<option value="Vichada">Vichada</option>
       </select>
       <label for="ciudad">Ciudad:</label>
       <select id="ciudad">
         <option value="">Selecciona una ciudad</option>
-        <option value="bogota">Bogotá</option>
-        <option value="medellin">Medellín</option>
-        <option value="cali">Cali</option>
+        <optgroup label="Amazonas"><option value="Leticia">Leticia</option><option value="Puerto Nariño">Puerto Nariño</option></optgroup>
+<optgroup label="Antioquia"><option value="Medellín">Medellín</option><option value="Bello">Bello</option><option value="Envigado">Envigado</option><option value="Itagüí">Itagüí</option></optgroup>
+<optgroup label="Arauca"><option value="Arauca">Arauca</option><option value="Arauquita">Arauquita</option></optgroup>
+<optgroup label="Atlántico"><option value="Barranquilla">Barranquilla</option><option value="Soledad">Soledad</option></optgroup>
+<optgroup label="Bogotá D.C."><option value="Bogotá">Bogotá</option></optgroup>
+<optgroup label="Bolívar"><option value="Cartagena">Cartagena</option><option value="Magangué">Magangué</option></optgroup>
+<optgroup label="Boyacá"><option value="Tunja">Tunja</option><option value="Duitama">Duitama</option><option value="Sogamoso">Sogamoso</option></optgroup>
+<optgroup label="Caldas"><option value="Manizales">Manizales</option></optgroup>
+<optgroup label="Caquetá"><option value="Florencia">Florencia</option></optgroup>
+<optgroup label="Casanare"><option value="Yopal">Yopal</option></optgroup>
+<optgroup label="Cauca"><option value="Popayán">Popayán</option></optgroup>
+<optgroup label="Cesar"><option value="Valledupar">Valledupar</option></optgroup>
+<optgroup label="Chocó"><option value="Quibdó">Quibdó</option></optgroup>
+<optgroup label="Córdoba"><option value="Montería">Montería</option></optgroup>
+<optgroup label="Cundinamarca"><option value="Soacha">Soacha</option><option value="Girardot">Girardot</option><option value="Zipaquirá">Zipaquirá</option></optgroup>
+<optgroup label="Guainía"><option value="Inírida">Inírida</option></optgroup>
+<optgroup label="Guaviare"><option value="San José del Guaviare">San José del Guaviare</option></optgroup>
+<optgroup label="Huila"><option value="Neiva">Neiva</option></optgroup>
+<optgroup label="La Guajira"><option value="Riohacha">Riohacha</option></optgroup>
+<optgroup label="Magdalena"><option value="Santa Marta">Santa Marta</option></optgroup>
+<optgroup label="Meta"><option value="Villavicencio">Villavicencio</option></optgroup>
+<optgroup label="Nariño"><option value="Pasto">Pasto</option></optgroup>
+<optgroup label="Norte de Santander"><option value="Cúcuta">Cúcuta</option></optgroup>
+<optgroup label="Putumayo"><option value="Mocoa">Mocoa</option></optgroup>
+<optgroup label="Quindío"><option value="Armenia">Armenia</option></optgroup>
+<optgroup label="Risaralda"><option value="Pereira">Pereira</option></optgroup>
+<optgroup label="San Andrés y Providencia"><option value="San Andrés">San Andrés</option></optgroup>
+<optgroup label="Santander"><option value="Bucaramanga">Bucaramanga</option></optgroup>
+<optgroup label="Sucre"><option value="Sincelejo">Sincelejo</option></optgroup>
+<optgroup label="Tolima"><option value="Ibagué">Ibagué</option></optgroup>
+<optgroup label="Valle del Cauca"><option value="Cali">Cali</option><option value="Palmira">Palmira</option></optgroup>
+<optgroup label="Vaupés"><option value="Mitú">Mitú</option></optgroup>
+<optgroup label="Vichada"><option value="Puerto Carreño">Puerto Carreño</option></optgroup>
       </select>
     </div>
     <div class="resultados">
@@ -103,16 +223,76 @@
       <label for="departamento">Departamento:</label>
       <select id="departamento">
         <option value="">Selecciona un departamento</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
+        <option value="Amazonas">Amazonas</option>
+<option value="Antioquia">Antioquia</option>
+<option value="Arauca">Arauca</option>
+<option value="Atlántico">Atlántico</option>
+<option value="Bogotá D.C.">Bogotá D.C.</option>
+<option value="Bolívar">Bolívar</option>
+<option value="Boyacá">Boyacá</option>
+<option value="Caldas">Caldas</option>
+<option value="Caquetá">Caquetá</option>
+<option value="Casanare">Casanare</option>
+<option value="Cauca">Cauca</option>
+<option value="Cesar">Cesar</option>
+<option value="Chocó">Chocó</option>
+<option value="Córdoba">Córdoba</option>
+<option value="Cundinamarca">Cundinamarca</option>
+<option value="Guainía">Guainía</option>
+<option value="Guaviare">Guaviare</option>
+<option value="Huila">Huila</option>
+<option value="La Guajira">La Guajira</option>
+<option value="Magdalena">Magdalena</option>
+<option value="Meta">Meta</option>
+<option value="Nariño">Nariño</option>
+<option value="Norte de Santander">Norte de Santander</option>
+<option value="Putumayo">Putumayo</option>
+<option value="Quindío">Quindío</option>
+<option value="Risaralda">Risaralda</option>
+<option value="San Andrés y Providencia">San Andrés y Providencia</option>
+<option value="Santander">Santander</option>
+<option value="Sucre">Sucre</option>
+<option value="Tolima">Tolima</option>
+<option value="Valle del Cauca">Valle del Cauca</option>
+<option value="Vaupés">Vaupés</option>
+<option value="Vichada">Vichada</option>
       </select>
       <label for="ciudad">Ciudad:</label>
       <select id="ciudad">
         <option value="">Selecciona una ciudad</option>
-        <option value="bogota">Bogotá</option>
-        <option value="medellin">Medellín</option>
-        <option value="cali">Cali</option>
+        <optgroup label="Amazonas"><option value="Leticia">Leticia</option><option value="Puerto Nariño">Puerto Nariño</option></optgroup>
+<optgroup label="Antioquia"><option value="Medellín">Medellín</option><option value="Bello">Bello</option><option value="Envigado">Envigado</option><option value="Itagüí">Itagüí</option></optgroup>
+<optgroup label="Arauca"><option value="Arauca">Arauca</option><option value="Arauquita">Arauquita</option></optgroup>
+<optgroup label="Atlántico"><option value="Barranquilla">Barranquilla</option><option value="Soledad">Soledad</option></optgroup>
+<optgroup label="Bogotá D.C."><option value="Bogotá">Bogotá</option></optgroup>
+<optgroup label="Bolívar"><option value="Cartagena">Cartagena</option><option value="Magangué">Magangué</option></optgroup>
+<optgroup label="Boyacá"><option value="Tunja">Tunja</option><option value="Duitama">Duitama</option><option value="Sogamoso">Sogamoso</option></optgroup>
+<optgroup label="Caldas"><option value="Manizales">Manizales</option></optgroup>
+<optgroup label="Caquetá"><option value="Florencia">Florencia</option></optgroup>
+<optgroup label="Casanare"><option value="Yopal">Yopal</option></optgroup>
+<optgroup label="Cauca"><option value="Popayán">Popayán</option></optgroup>
+<optgroup label="Cesar"><option value="Valledupar">Valledupar</option></optgroup>
+<optgroup label="Chocó"><option value="Quibdó">Quibdó</option></optgroup>
+<optgroup label="Córdoba"><option value="Montería">Montería</option></optgroup>
+<optgroup label="Cundinamarca"><option value="Soacha">Soacha</option><option value="Girardot">Girardot</option><option value="Zipaquirá">Zipaquirá</option></optgroup>
+<optgroup label="Guainía"><option value="Inírida">Inírida</option></optgroup>
+<optgroup label="Guaviare"><option value="San José del Guaviare">San José del Guaviare</option></optgroup>
+<optgroup label="Huila"><option value="Neiva">Neiva</option></optgroup>
+<optgroup label="La Guajira"><option value="Riohacha">Riohacha</option></optgroup>
+<optgroup label="Magdalena"><option value="Santa Marta">Santa Marta</option></optgroup>
+<optgroup label="Meta"><option value="Villavicencio">Villavicencio</option></optgroup>
+<optgroup label="Nariño"><option value="Pasto">Pasto</option></optgroup>
+<optgroup label="Norte de Santander"><option value="Cúcuta">Cúcuta</option></optgroup>
+<optgroup label="Putumayo"><option value="Mocoa">Mocoa</option></optgroup>
+<optgroup label="Quindío"><option value="Armenia">Armenia</option></optgroup>
+<optgroup label="Risaralda"><option value="Pereira">Pereira</option></optgroup>
+<optgroup label="San Andrés y Providencia"><option value="San Andrés">San Andrés</option></optgroup>
+<optgroup label="Santander"><option value="Bucaramanga">Bucaramanga</option></optgroup>
+<optgroup label="Sucre"><option value="Sincelejo">Sincelejo</option></optgroup>
+<optgroup label="Tolima"><option value="Ibagué">Ibagué</option></optgroup>
+<optgroup label="Valle del Cauca"><option value="Cali">Cali</option><option value="Palmira">Palmira</option></optgroup>
+<optgroup label="Vaupés"><option value="Mitú">Mitú</option></optgroup>
+<optgroup label="Vichada"><option value="Puerto Carreño">Puerto Carreño</option></optgroup>
       </select>
     </div>
     <div class="resultados">
@@ -124,16 +304,76 @@
       <label for="departamento">Departamento:</label>
       <select id="departamento">
         <option value="">Selecciona un departamento</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
+        <option value="Amazonas">Amazonas</option>
+<option value="Antioquia">Antioquia</option>
+<option value="Arauca">Arauca</option>
+<option value="Atlántico">Atlántico</option>
+<option value="Bogotá D.C.">Bogotá D.C.</option>
+<option value="Bolívar">Bolívar</option>
+<option value="Boyacá">Boyacá</option>
+<option value="Caldas">Caldas</option>
+<option value="Caquetá">Caquetá</option>
+<option value="Casanare">Casanare</option>
+<option value="Cauca">Cauca</option>
+<option value="Cesar">Cesar</option>
+<option value="Chocó">Chocó</option>
+<option value="Córdoba">Córdoba</option>
+<option value="Cundinamarca">Cundinamarca</option>
+<option value="Guainía">Guainía</option>
+<option value="Guaviare">Guaviare</option>
+<option value="Huila">Huila</option>
+<option value="La Guajira">La Guajira</option>
+<option value="Magdalena">Magdalena</option>
+<option value="Meta">Meta</option>
+<option value="Nariño">Nariño</option>
+<option value="Norte de Santander">Norte de Santander</option>
+<option value="Putumayo">Putumayo</option>
+<option value="Quindío">Quindío</option>
+<option value="Risaralda">Risaralda</option>
+<option value="San Andrés y Providencia">San Andrés y Providencia</option>
+<option value="Santander">Santander</option>
+<option value="Sucre">Sucre</option>
+<option value="Tolima">Tolima</option>
+<option value="Valle del Cauca">Valle del Cauca</option>
+<option value="Vaupés">Vaupés</option>
+<option value="Vichada">Vichada</option>
       </select>
       <label for="ciudad">Ciudad:</label>
       <select id="ciudad">
         <option value="">Selecciona una ciudad</option>
-        <option value="bogota">Bogotá</option>
-        <option value="medellin">Medellín</option>
-        <option value="cali">Cali</option>
+        <optgroup label="Amazonas"><option value="Leticia">Leticia</option><option value="Puerto Nariño">Puerto Nariño</option></optgroup>
+<optgroup label="Antioquia"><option value="Medellín">Medellín</option><option value="Bello">Bello</option><option value="Envigado">Envigado</option><option value="Itagüí">Itagüí</option></optgroup>
+<optgroup label="Arauca"><option value="Arauca">Arauca</option><option value="Arauquita">Arauquita</option></optgroup>
+<optgroup label="Atlántico"><option value="Barranquilla">Barranquilla</option><option value="Soledad">Soledad</option></optgroup>
+<optgroup label="Bogotá D.C."><option value="Bogotá">Bogotá</option></optgroup>
+<optgroup label="Bolívar"><option value="Cartagena">Cartagena</option><option value="Magangué">Magangué</option></optgroup>
+<optgroup label="Boyacá"><option value="Tunja">Tunja</option><option value="Duitama">Duitama</option><option value="Sogamoso">Sogamoso</option></optgroup>
+<optgroup label="Caldas"><option value="Manizales">Manizales</option></optgroup>
+<optgroup label="Caquetá"><option value="Florencia">Florencia</option></optgroup>
+<optgroup label="Casanare"><option value="Yopal">Yopal</option></optgroup>
+<optgroup label="Cauca"><option value="Popayán">Popayán</option></optgroup>
+<optgroup label="Cesar"><option value="Valledupar">Valledupar</option></optgroup>
+<optgroup label="Chocó"><option value="Quibdó">Quibdó</option></optgroup>
+<optgroup label="Córdoba"><option value="Montería">Montería</option></optgroup>
+<optgroup label="Cundinamarca"><option value="Soacha">Soacha</option><option value="Girardot">Girardot</option><option value="Zipaquirá">Zipaquirá</option></optgroup>
+<optgroup label="Guainía"><option value="Inírida">Inírida</option></optgroup>
+<optgroup label="Guaviare"><option value="San José del Guaviare">San José del Guaviare</option></optgroup>
+<optgroup label="Huila"><option value="Neiva">Neiva</option></optgroup>
+<optgroup label="La Guajira"><option value="Riohacha">Riohacha</option></optgroup>
+<optgroup label="Magdalena"><option value="Santa Marta">Santa Marta</option></optgroup>
+<optgroup label="Meta"><option value="Villavicencio">Villavicencio</option></optgroup>
+<optgroup label="Nariño"><option value="Pasto">Pasto</option></optgroup>
+<optgroup label="Norte de Santander"><option value="Cúcuta">Cúcuta</option></optgroup>
+<optgroup label="Putumayo"><option value="Mocoa">Mocoa</option></optgroup>
+<optgroup label="Quindío"><option value="Armenia">Armenia</option></optgroup>
+<optgroup label="Risaralda"><option value="Pereira">Pereira</option></optgroup>
+<optgroup label="San Andrés y Providencia"><option value="San Andrés">San Andrés</option></optgroup>
+<optgroup label="Santander"><option value="Bucaramanga">Bucaramanga</option></optgroup>
+<optgroup label="Sucre"><option value="Sincelejo">Sincelejo</option></optgroup>
+<optgroup label="Tolima"><option value="Ibagué">Ibagué</option></optgroup>
+<optgroup label="Valle del Cauca"><option value="Cali">Cali</option><option value="Palmira">Palmira</option></optgroup>
+<optgroup label="Vaupés"><option value="Mitú">Mitú</option></optgroup>
+<optgroup label="Vichada"><option value="Puerto Carreño">Puerto Carreño</option></optgroup>
       </select>
     </div>
     <div class="resultados">
@@ -145,16 +385,76 @@
       <label for="departamento">Departamento:</label>
       <select id="departamento">
         <option value="">Selecciona un departamento</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
+        <option value="Amazonas">Amazonas</option>
+<option value="Antioquia">Antioquia</option>
+<option value="Arauca">Arauca</option>
+<option value="Atlántico">Atlántico</option>
+<option value="Bogotá D.C.">Bogotá D.C.</option>
+<option value="Bolívar">Bolívar</option>
+<option value="Boyacá">Boyacá</option>
+<option value="Caldas">Caldas</option>
+<option value="Caquetá">Caquetá</option>
+<option value="Casanare">Casanare</option>
+<option value="Cauca">Cauca</option>
+<option value="Cesar">Cesar</option>
+<option value="Chocó">Chocó</option>
+<option value="Córdoba">Córdoba</option>
+<option value="Cundinamarca">Cundinamarca</option>
+<option value="Guainía">Guainía</option>
+<option value="Guaviare">Guaviare</option>
+<option value="Huila">Huila</option>
+<option value="La Guajira">La Guajira</option>
+<option value="Magdalena">Magdalena</option>
+<option value="Meta">Meta</option>
+<option value="Nariño">Nariño</option>
+<option value="Norte de Santander">Norte de Santander</option>
+<option value="Putumayo">Putumayo</option>
+<option value="Quindío">Quindío</option>
+<option value="Risaralda">Risaralda</option>
+<option value="San Andrés y Providencia">San Andrés y Providencia</option>
+<option value="Santander">Santander</option>
+<option value="Sucre">Sucre</option>
+<option value="Tolima">Tolima</option>
+<option value="Valle del Cauca">Valle del Cauca</option>
+<option value="Vaupés">Vaupés</option>
+<option value="Vichada">Vichada</option>
       </select>
       <label for="ciudad">Ciudad:</label>
       <select id="ciudad">
         <option value="">Selecciona una ciudad</option>
-        <option value="bogota">Bogotá</option>
-        <option value="medellin">Medellín</option>
-        <option value="cali">Cali</option>
+        <optgroup label="Amazonas"><option value="Leticia">Leticia</option><option value="Puerto Nariño">Puerto Nariño</option></optgroup>
+<optgroup label="Antioquia"><option value="Medellín">Medellín</option><option value="Bello">Bello</option><option value="Envigado">Envigado</option><option value="Itagüí">Itagüí</option></optgroup>
+<optgroup label="Arauca"><option value="Arauca">Arauca</option><option value="Arauquita">Arauquita</option></optgroup>
+<optgroup label="Atlántico"><option value="Barranquilla">Barranquilla</option><option value="Soledad">Soledad</option></optgroup>
+<optgroup label="Bogotá D.C."><option value="Bogotá">Bogotá</option></optgroup>
+<optgroup label="Bolívar"><option value="Cartagena">Cartagena</option><option value="Magangué">Magangué</option></optgroup>
+<optgroup label="Boyacá"><option value="Tunja">Tunja</option><option value="Duitama">Duitama</option><option value="Sogamoso">Sogamoso</option></optgroup>
+<optgroup label="Caldas"><option value="Manizales">Manizales</option></optgroup>
+<optgroup label="Caquetá"><option value="Florencia">Florencia</option></optgroup>
+<optgroup label="Casanare"><option value="Yopal">Yopal</option></optgroup>
+<optgroup label="Cauca"><option value="Popayán">Popayán</option></optgroup>
+<optgroup label="Cesar"><option value="Valledupar">Valledupar</option></optgroup>
+<optgroup label="Chocó"><option value="Quibdó">Quibdó</option></optgroup>
+<optgroup label="Córdoba"><option value="Montería">Montería</option></optgroup>
+<optgroup label="Cundinamarca"><option value="Soacha">Soacha</option><option value="Girardot">Girardot</option><option value="Zipaquirá">Zipaquirá</option></optgroup>
+<optgroup label="Guainía"><option value="Inírida">Inírida</option></optgroup>
+<optgroup label="Guaviare"><option value="San José del Guaviare">San José del Guaviare</option></optgroup>
+<optgroup label="Huila"><option value="Neiva">Neiva</option></optgroup>
+<optgroup label="La Guajira"><option value="Riohacha">Riohacha</option></optgroup>
+<optgroup label="Magdalena"><option value="Santa Marta">Santa Marta</option></optgroup>
+<optgroup label="Meta"><option value="Villavicencio">Villavicencio</option></optgroup>
+<optgroup label="Nariño"><option value="Pasto">Pasto</option></optgroup>
+<optgroup label="Norte de Santander"><option value="Cúcuta">Cúcuta</option></optgroup>
+<optgroup label="Putumayo"><option value="Mocoa">Mocoa</option></optgroup>
+<optgroup label="Quindío"><option value="Armenia">Armenia</option></optgroup>
+<optgroup label="Risaralda"><option value="Pereira">Pereira</option></optgroup>
+<optgroup label="San Andrés y Providencia"><option value="San Andrés">San Andrés</option></optgroup>
+<optgroup label="Santander"><option value="Bucaramanga">Bucaramanga</option></optgroup>
+<optgroup label="Sucre"><option value="Sincelejo">Sincelejo</option></optgroup>
+<optgroup label="Tolima"><option value="Ibagué">Ibagué</option></optgroup>
+<optgroup label="Valle del Cauca"><option value="Cali">Cali</option><option value="Palmira">Palmira</option></optgroup>
+<optgroup label="Vaupés"><option value="Mitú">Mitú</option></optgroup>
+<optgroup label="Vichada"><option value="Puerto Carreño">Puerto Carreño</option></optgroup>
       </select>
     </div>
     <div class="resultados">
@@ -166,23 +466,83 @@
       <label for="departamento">Departamento:</label>
       <select id="departamento">
         <option value="">Selecciona un departamento</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="valle">Valle del Cauca</option>
+        <option value="Amazonas">Amazonas</option>
+<option value="Antioquia">Antioquia</option>
+<option value="Arauca">Arauca</option>
+<option value="Atlántico">Atlántico</option>
+<option value="Bogotá D.C.">Bogotá D.C.</option>
+<option value="Bolívar">Bolívar</option>
+<option value="Boyacá">Boyacá</option>
+<option value="Caldas">Caldas</option>
+<option value="Caquetá">Caquetá</option>
+<option value="Casanare">Casanare</option>
+<option value="Cauca">Cauca</option>
+<option value="Cesar">Cesar</option>
+<option value="Chocó">Chocó</option>
+<option value="Córdoba">Córdoba</option>
+<option value="Cundinamarca">Cundinamarca</option>
+<option value="Guainía">Guainía</option>
+<option value="Guaviare">Guaviare</option>
+<option value="Huila">Huila</option>
+<option value="La Guajira">La Guajira</option>
+<option value="Magdalena">Magdalena</option>
+<option value="Meta">Meta</option>
+<option value="Nariño">Nariño</option>
+<option value="Norte de Santander">Norte de Santander</option>
+<option value="Putumayo">Putumayo</option>
+<option value="Quindío">Quindío</option>
+<option value="Risaralda">Risaralda</option>
+<option value="San Andrés y Providencia">San Andrés y Providencia</option>
+<option value="Santander">Santander</option>
+<option value="Sucre">Sucre</option>
+<option value="Tolima">Tolima</option>
+<option value="Valle del Cauca">Valle del Cauca</option>
+<option value="Vaupés">Vaupés</option>
+<option value="Vichada">Vichada</option>
       </select>
       <label for="ciudad">Ciudad:</label>
       <select id="ciudad">
         <option value="">Selecciona una ciudad</option>
-        <option value="bogota">Bogotá</option>
-        <option value="medellin">Medellín</option>
-        <option value="cali">Cali</option>
+        <optgroup label="Amazonas"><option value="Leticia">Leticia</option><option value="Puerto Nariño">Puerto Nariño</option></optgroup>
+<optgroup label="Antioquia"><option value="Medellín">Medellín</option><option value="Bello">Bello</option><option value="Envigado">Envigado</option><option value="Itagüí">Itagüí</option></optgroup>
+<optgroup label="Arauca"><option value="Arauca">Arauca</option><option value="Arauquita">Arauquita</option></optgroup>
+<optgroup label="Atlántico"><option value="Barranquilla">Barranquilla</option><option value="Soledad">Soledad</option></optgroup>
+<optgroup label="Bogotá D.C."><option value="Bogotá">Bogotá</option></optgroup>
+<optgroup label="Bolívar"><option value="Cartagena">Cartagena</option><option value="Magangué">Magangué</option></optgroup>
+<optgroup label="Boyacá"><option value="Tunja">Tunja</option><option value="Duitama">Duitama</option><option value="Sogamoso">Sogamoso</option></optgroup>
+<optgroup label="Caldas"><option value="Manizales">Manizales</option></optgroup>
+<optgroup label="Caquetá"><option value="Florencia">Florencia</option></optgroup>
+<optgroup label="Casanare"><option value="Yopal">Yopal</option></optgroup>
+<optgroup label="Cauca"><option value="Popayán">Popayán</option></optgroup>
+<optgroup label="Cesar"><option value="Valledupar">Valledupar</option></optgroup>
+<optgroup label="Chocó"><option value="Quibdó">Quibdó</option></optgroup>
+<optgroup label="Córdoba"><option value="Montería">Montería</option></optgroup>
+<optgroup label="Cundinamarca"><option value="Soacha">Soacha</option><option value="Girardot">Girardot</option><option value="Zipaquirá">Zipaquirá</option></optgroup>
+<optgroup label="Guainía"><option value="Inírida">Inírida</option></optgroup>
+<optgroup label="Guaviare"><option value="San José del Guaviare">San José del Guaviare</option></optgroup>
+<optgroup label="Huila"><option value="Neiva">Neiva</option></optgroup>
+<optgroup label="La Guajira"><option value="Riohacha">Riohacha</option></optgroup>
+<optgroup label="Magdalena"><option value="Santa Marta">Santa Marta</option></optgroup>
+<optgroup label="Meta"><option value="Villavicencio">Villavicencio</option></optgroup>
+<optgroup label="Nariño"><option value="Pasto">Pasto</option></optgroup>
+<optgroup label="Norte de Santander"><option value="Cúcuta">Cúcuta</option></optgroup>
+<optgroup label="Putumayo"><option value="Mocoa">Mocoa</option></optgroup>
+<optgroup label="Quindío"><option value="Armenia">Armenia</option></optgroup>
+<optgroup label="Risaralda"><option value="Pereira">Pereira</option></optgroup>
+<optgroup label="San Andrés y Providencia"><option value="San Andrés">San Andrés</option></optgroup>
+<optgroup label="Santander"><option value="Bucaramanga">Bucaramanga</option></optgroup>
+<optgroup label="Sucre"><option value="Sincelejo">Sincelejo</option></optgroup>
+<optgroup label="Tolima"><option value="Ibagué">Ibagué</option></optgroup>
+<optgroup label="Valle del Cauca"><option value="Cali">Cali</option><option value="Palmira">Palmira</option></optgroup>
+<optgroup label="Vaupés"><option value="Mitú">Mitú</option></optgroup>
+<optgroup label="Vichada"><option value="Puerto Carreño">Puerto Carreño</option></optgroup>
       </select>
     </div>
     <div class="resultados">
       <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
     </div>
     </section>
-  <section id="contacto"><h2>Contacto</h2><p>[Formulario de contacto aquí]</p></section>
+  <section id="contacto"><h2>Contacto</h2><p>¿Deseas aparecer en el directorio? Escríbenos a <strong>contacto@vendingcolombia.co</strong> o llena nuestro formulario.</p></section>
 
   <script>
     const sections = document.querySelectorAll('section, .center-section');
