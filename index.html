@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio Vending Colombia</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    nav ul li {
+      margin: 5px 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form label, form input, form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .operador {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Directorio Vending Colombia</h1>
+    <nav>
+      <ul>
+        <li><a href="#operadores">Operadores</a></li>
+        <li><a href="#servicio-tecnico">Servicio Técnico</a></li>
+        <li><a href="#insumos-cafe">Insumos Café</a></li>
+        <li><a href="#snacks-bebidas">Snacks y Bebidas</a></li>
+        <li><a href="#vitrina">Vitrina</a></li>
+        <li><a href="#contacto">Contáctenos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="operadores">
+      <h2>Operadores por Departamento</h2>
+      <label for="departamento">Selecciona un departamento:</label>
+      <select id="departamento">
+        <option value="todos">Todos</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <div id="lista-operadores">
+        <div class="operador" data-depto="cundinamarca">
+          <p><strong>Máquinas Vending Bogotá</strong><br>Tel: 3001234567<br>Email: contacto@mvbogota.com</p>
+        </div>
+        <div class="operador" data-depto="antioquia">
+          <p><strong>Vending Medellín</strong><br>Tel: 3107654321<br>Email: info@vmedellin.com</p>
+        </div>
+        <div class="operador" data-depto="valle">
+          <p><strong>Café Vending Cali</strong><br>Tel: 3205551234<br>Email: ventas@cafevendingcali.com</p>
+        </div>
+        <div class="operador" data-depto="cundinamarca">
+          <p><strong>Distribuidores Zona Centro</strong><br>Tel: 3229988776<br>Email: zona@distribuidores.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicio-tecnico">
+      <h2>Servicio Técnico y Repuestos</h2>
+      <div>
+        <p><strong>TecniVending Colombia</strong><br>Tel: 3112223344<br>Email: soporte@tecnivending.co</p>
+        <p><strong>Soluciones Técnicas Vending</strong><br>Tel: 3008899000<br>Email: reparaciones@stvending.com</p>
+      </div>
+    </section>
+
+    <section id="insumos-cafe">
+      <h2>Proveedores de Insumos para Café</h2>
+      <div>
+        <p><strong>Café Express Colombia</strong><br>Tel: 3024567890<br>Email: contacto@cafeexpress.com.co</p>
+        <p><strong>Delicias del Grano</strong><br>Tel: 3111239876<br>Email: ventas@deliciasgrano.com</p>
+      </div>
+    </section>
+
+    <section id="snacks-bebidas">
+      <h2>Proveedores de Snacks y Bebidas</h2>
+      <div>
+        <p><strong>Distribuciones Rápidas S.A.S.</strong><br>Tel: 3019876543<br>Email: pedidos@distribucionesrapidas.com</p>
+        <p><strong>SnackMaster Colombia</strong><br>Tel: 3134567890<br>Email: ventas@snackmaster.com</p>
+      </div>
+    </section>
+
+    <section id="vitrina">
+      <h2>Vitrina de Ventas</h2>
+      <div>
+        <p><strong>Máquina Vending Automática XZ-300</strong><br>Precio: $5.000.000 COP<br>Contacto: ventas@vendingventas.com</p>
+        <p><strong>Máquina Semiautomática YT-200</strong><br>Precio: $3.800.000 COP<br>Contacto: info@equiposvending.co</p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctenos</h2>
+      <form action="mailto:directoriovendingcol@gmail.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <a class="whatsapp-button" href="https://wa.me/573001234567" target="_blank">Afíliate vía WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Directorio Vending Colombia. Todos los derechos reservados.</p>
+    <p>Síguenos en:
+      <a href="#" style="color:white;">Facebook</a> |
+      <a href="#" style="color:white;">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    const selectDepto = document.getElementById('departamento');
+    const operadores = document.querySelectorAll('.operador');
+    selectDepto.addEventListener('change', () => {
+      const selected = selectDepto.value;
+      operadores.forEach(op => {
+        op.style.display = (selected === 'todos' || op.dataset.depto === selected) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
