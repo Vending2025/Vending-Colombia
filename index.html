@@ -11,7 +11,7 @@
     nav { background: #34495e; padding: 1em; position: sticky; top: 0; z-index: 1000; text-align: center; }
     nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; cursor: pointer; }
     nav a:hover { text-decoration: underline; }
-    section { display: none; padding: 2em; max-width: 1200px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; margin-top: 20px;}
+    section { display: none; padding: 2em; max-width: 1200px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; margin-top: 20px; }
     section.active { display: block; }
     h2 { color: #2c3e50; }
     .center-section { display: flex; flex-wrap: wrap; gap: 20px; padding: 2em; max-width: 1200px; margin: auto; }
@@ -20,6 +20,8 @@
     .banner { flex: 1 1 35%; position: relative; overflow: hidden; height: 300px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
     .slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
     .slide.active { opacity: 1; }
+    .filters { margin: 1em 0; }
+    select { margin: 0 10px; padding: 5px; }
   </style>
 </head>
 <body>
@@ -54,13 +56,133 @@
   </div>
 
   <section id="quienes"><h2>Quiénes Somos</h2><p>Somos el primer directorio nacional de vending en Colombia.</p></section>
-  <section id="operadores"><h2>Operadores en Colombia</h2><p>[Filtros y datos aquí]</p></section>
-  <section id="tecnico"><h2>Servicio Técnico</h2><p>[Filtros y datos aquí]</p></section>
-  <section id="cafe"><h2>Proveedores de Café</h2><p>[Filtros y datos aquí]</p></section>
-  <section id="snacks"><h2>Snacks y Bebidas</h2><p>[Filtros y datos aquí]</p></section>
-  <section id="vitrina"><h2>Vitrina de Ventas</h2><p>[Ofertas aquí]</p></section>
-  <section id="otros"><h2>Otros Servicios</h2><p>[Filtros y datos aquí]</p></section>
-  <section id="contacto"><h2>Contacto</h2><p>[Formulario aquí]</p></section>
+  <section id="operadores"><h2>Operadores en Colombia</h2>
+    <div class="filters">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecciona un departamento</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+      </select>
+    </div>
+    <div class="resultados">
+      <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
+    </div>
+    </section>
+  <section id="tecnico"><h2>Servicio Técnico</h2>
+    <div class="filters">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecciona un departamento</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+      </select>
+    </div>
+    <div class="resultados">
+      <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
+    </div>
+    </section>
+  <section id="cafe"><h2>Proveedores de Café</h2>
+    <div class="filters">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecciona un departamento</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+      </select>
+    </div>
+    <div class="resultados">
+      <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
+    </div>
+    </section>
+  <section id="snacks"><h2>Snacks y Bebidas</h2>
+    <div class="filters">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecciona un departamento</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+      </select>
+    </div>
+    <div class="resultados">
+      <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
+    </div>
+    </section>
+  <section id="vitrina"><h2>Vitrina de Ventas</h2>
+    <div class="filters">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecciona un departamento</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+      </select>
+    </div>
+    <div class="resultados">
+      <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
+    </div>
+    </section>
+  <section id="otros"><h2>Otros Servicios</h2>
+    <div class="filters">
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecciona un departamento</option>
+        <option value="cundinamarca">Cundinamarca</option>
+        <option value="antioquia">Antioquia</option>
+        <option value="valle">Valle del Cauca</option>
+      </select>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+      </select>
+    </div>
+    <div class="resultados">
+      <p>Aquí se mostrarán los datos de contacto de los anunciantes según el filtro seleccionado.</p>
+    </div>
+    </section>
+  <section id="contacto"><h2>Contacto</h2><p>[Formulario de contacto aquí]</p></section>
 
   <script>
     const sections = document.querySelectorAll('section, .center-section');
